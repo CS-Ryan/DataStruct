@@ -10,12 +10,12 @@ void fun1(char s[])
 	printf("%s\n",s);
 	printf("%s",asctime(timeinfo));
 }
-struct BSTNode//Êı¾İ½á¹¹ÀàĞÍ
+struct BSTNode//æ•°æ®ç»“æ„ç±»å‹
 {
 	int data;
 	struct BSTNode *lchild,*rchild;
 };
-struct BSTNode *CreateBST(int a[],int n)//¸ù¾İÊı×éa´´½¨¶ş²æÊ÷ÅÅĞòÊ÷
+struct BSTNode *CreateBST(int a[],int n)//æ ¹æ®æ•°ç»„aåˆ›å»ºäºŒå‰æ ‘æ’åºæ ‘
 {
 	int i;
 	struct BSTNode *root=(struct BSTNode *)malloc(sizeof(struct BSTNode)),*pre=NULL,*p=NULL;
@@ -35,7 +35,7 @@ struct BSTNode *CreateBST(int a[],int n)//¸ù¾İÊı×éa´´½¨¶ş²æÊ÷ÅÅĞòÊ÷
 			else
 				break;
 		}
-		if(!p)//Èç¹ûpµÈÓÚ¿Õ£¬Ã»ÕÒµ½ÏàµÈ½áµã
+		if(!p)//å¦‚æœpç­‰äºç©ºï¼Œæ²¡æ‰¾åˆ°ç›¸ç­‰ç»“ç‚¹
 		{
 			p=(struct BSTNode *)malloc(sizeof(struct BSTNode));
 			p->data=a[i];
@@ -49,7 +49,7 @@ struct BSTNode *CreateBST(int a[],int n)//¸ù¾İÊı×éa´´½¨¶ş²æÊ÷ÅÅĞòÊ÷
 	}
 	return root;
 }
-void InOrder(struct BSTNode *root)//ÖĞĞò±éÀú¶ş²æÅÅĞòÊ÷
+void InOrder(struct BSTNode *root)//ä¸­åºéå†äºŒå‰æ’åºæ ‘
 {
 	if(root!=NULL)
 	{
@@ -58,7 +58,7 @@ void InOrder(struct BSTNode *root)//ÖĞĞò±éÀú¶ş²æÅÅĞòÊ÷
 		InOrder(root->rchild);
 	}
 }
-void FiOrder(struct BSTNode *root)//ÏÈĞò±éÀú¶ş²æÅÅĞòÊ÷
+void FiOrder(struct BSTNode *root)//å…ˆåºéå†äºŒå‰æ’åºæ ‘
 {
 	if(root!=NULL)
 	{
@@ -67,7 +67,7 @@ void FiOrder(struct BSTNode *root)//ÏÈĞò±éÀú¶ş²æÅÅĞòÊ÷
 		FiOrder(root->rchild);
 	}
 }
-void FreeBST(struct BSTNode *root)//ÊÍ·Å¶ş²æÅÅĞòÊ÷¿Õ¼ä
+void FreeBST(struct BSTNode *root)//é‡Šæ”¾äºŒå‰æ’åºæ ‘ç©ºé—´
 {
 	if(root!=NULL)
 	{
@@ -79,14 +79,14 @@ void FreeBST(struct BSTNode *root)//ÊÍ·Å¶ş²æÅÅĞòÊ÷¿Õ¼ä
 
 void main()
 {
-	//int a[12]={7,6,9,8,12,10},h,hc;//RR-¸ù
-	int a[12]={5,2,7,6,9,12,1,3,4,8,10,11};//RR-·Ç¸ù
-	//int a[12]={7,6,19,11,22,12},h,hc;//RL-¸ù
-	//int a[12]={5,3,2,4,1,7,6,19,11,12,22},h,hc;//RL-·Ç¸ù
-	//int a[12]={27,19,11,22,12,32},h,hc;//LL-¸ù
-	//int a[12]={50,60,27,19,11,22,12,32},h,hc;//LL-·Ç¸ù
-	//int a[12]={27,19,11,22,32,23},h,hc;//LR-¸ù
-	//int a[12]={50,60,27,19,11,22,32,23},h,hc;//LR-·Ç¸ù
+	//int a[12]={7,6,9,8,12,10},h,hc;//RR-æ ¹
+	int a[12]={5,2,7,6,9,12,1,3,4,8,10,11};//RR-éæ ¹
+	//int a[12]={7,6,19,11,22,12},h,hc;//RL-æ ¹
+	//int a[12]={5,3,2,4,1,7,6,19,11,12,22},h,hc;//RL-éæ ¹
+	//int a[12]={27,19,11,22,12,32},h,hc;//LL-æ ¹
+	//int a[12]={50,60,27,19,11,22,12,32},h,hc;//LL-éæ ¹
+	//int a[12]={27,19,11,22,32,23},h,hc;//LR-æ ¹
+	//int a[12]={50,60,27,19,11,22,32,23},h,hc;//LR-éæ ¹
 	struct BSTNode *bst=NULL,*p=NULL;
 	int ys=1;
 	bst=CreateBST(a,12);
@@ -98,5 +98,5 @@ void main()
 
 	FreeBST(bst);
 
-	fun1("Æ½ºâ¶ş²æÊ÷ÅĞ¶Ï¼°µ÷Õû³ÌĞòÊµÏÖ");
+	fun1("å¹³è¡¡äºŒå‰æ ‘åˆ¤æ–­åŠè°ƒæ•´ç¨‹åºå®ç°");
 }
