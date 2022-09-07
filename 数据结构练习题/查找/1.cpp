@@ -14,20 +14,20 @@ void fun(char s[])
 int main()
 {	int i,n,x,a[maxsize];
 //int high,mid,low;
-printf("ÇëÊäÈënµÄÊıÁ¿\n");
+printf("è¯·è¾“å…¥nçš„æ•°é‡\n");
 scanf("%d",&x);//	high=x;low=0;
 	for(i=1;i<x+1;i++)
 	{
 		scanf("%d",&a[i]);	
 	}
-	printf("ÇëÊäÈëÄãÏëÒª²éÕÒµÄÊı×Ö\n");
+	printf("è¯·è¾“å…¥ä½ æƒ³è¦æŸ¥æ‰¾çš„æ•°å­—\n");
 	scanf("%d",&n);	a[0]=n;i=n;
 		while(a[i]!=n)
 		{
 			i--;
 		}
-		if(i==0)printf("²éÕÒÊ§°Ü\n");else
-		{	printf("²éÕÒ³É¹¦!\n");printf("¸ÃÔªËØÔÚÊı×éÏÂ±êÎª%d\n",i);}
-		fun("ÕÛ°ë²éÕÒËã·¨");
+		if(i==0)printf("æŸ¥æ‰¾å¤±è´¥\n");else
+		{	printf("æŸ¥æ‰¾æˆåŠŸ!\n");printf("è¯¥å…ƒç´ åœ¨æ•°ç»„ä¸‹æ ‡ä¸º%d\n",i);}
+		fun("æŠ˜åŠæŸ¥æ‰¾ç®—æ³•");
 	
 }
