@@ -14,13 +14,13 @@ void fun(char s[])
 int main()
 {	int i,n,x,a[maxsize];
 int high,mid,low;
-printf("ÇëÊäÈënµÄÊıÁ¿\n");
+printf("è¯·è¾“å…¥nçš„æ•°é‡\n");
 scanf("%d",&x);	high=x;low=0;
 	for(i=0;i<x;i++)
 	{
 		scanf("%d",&a[i]);	
 	}
-	printf("ÇëÊäÈëÄãÏëÒª²éÕÒµÄÊı×Ö\n");
+	printf("è¯·è¾“å…¥ä½ æƒ³è¦æŸ¥æ‰¾çš„æ•°å­—\n");
 	scanf("%d",&n);
 		while(low<=high)
 	{	
@@ -35,9 +35,9 @@ scanf("%d",&x);	high=x;low=0;
 			low=mid+1;
 		else
 			if(a[mid]=n)
-			{	printf("²éÕÒµÄÔªËØÔÚÊı×éÖĞµÄÏÂ±êÎª%d\n",mid); break;}
+			{	printf("æŸ¥æ‰¾çš„å…ƒç´ åœ¨æ•°ç»„ä¸­çš„ä¸‹æ ‡ä¸º%d\n",mid); break;}
 	}
 	
-		fun("ÕÛ°ë²éÕÒËã·¨");
+		fun("æŠ˜åŠæŸ¥æ‰¾ç®—æ³•");
 	
 }
